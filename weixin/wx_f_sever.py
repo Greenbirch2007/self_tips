@@ -1,8 +1,4 @@
 
-
-
-
-
 # 两种改进思路：
 # 1.直接使用wxpy，想办法给公众号发信息
 
@@ -42,7 +38,7 @@ import datetime
 
 # 按照现在服务器的这个脚本就可以，但是在手机上无法完整显示二维码！
 # 修改代码和换app已经没有用了。想着如何可以不用扫码！
-bot = Bot(console_qr=True)
+bot = Bot(console_qr=True,cache_path=True)
 
 
 
@@ -99,10 +95,13 @@ if __name__=="__main__":
     # 1.跟踪微信群，并识别字段(传给文件传输对象，用于测试)
 
 # 开始  跟踪ENTRY - 19群
+    try:
+        strugglegroup = bot.groups().search('ENTRY - 19群')[0]
+        print_group_msg(strugglegroup)
 
-    strugglegroup = bot.groups().search('ENTRY - 19群')[0]
-    print_group_msg(strugglegroup)
-
+    except:
+        pass
+    embed()
 
 
     # 2.指定公众号，发送指定字段（直接测试即可）
@@ -110,7 +109,7 @@ if __name__=="__main__":
    # 保持登陆 / 运行::
 
     # 进入 Python 命令行、让程序保持运行
-    embed()
+
 
     # 或者仅仅堵塞线程
     # bot.join()
