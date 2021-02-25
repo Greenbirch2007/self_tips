@@ -27,6 +27,7 @@
 #         itchat.send("品川、、", toUserName=userName)
 # itchat.auto_login(hotReload=True)  # hotReload = True  不用重复扫描二维码
 # itchat.run()
+import time
 
 import itchat
 from wxpy import *
@@ -37,7 +38,11 @@ import datetime
 
 #尝试挂在服务器上linux  console_qr 参数
 #bot = Bot(console_qr=2, cache_path=True)
-bot = Bot(cache_path=True)
+
+
+# 按照现在服务器的这个脚本就可以，但是在手机上无法完整显示二维码！
+# 修改代码和换app已经没有用了。想着如何可以不用扫码！
+bot = Bot(console_qr=True)
 
 
 
@@ -48,7 +53,7 @@ def print_group_msg(msg):# 基本可以跟踪群消息，调整之后 捕获字�
     str_msg = str(msg)
     print(str_msg)
     # 下面这个判断不怎么有效！？
-    if "最新" in str_msg: # 捕获的精确.第一次不算捕获吗？ 直接用
+    if "追加" in str_msg: # 捕获的精确.第一次不算捕获吗？ 直接用
         print("最新+追加成功")
 
         bot.file_helper.send(msg) # 跟踪测试
@@ -87,11 +92,14 @@ def send_MP():
 
 
 
-
+# 想办法解决LOG OUT的登出问题
+#先改进代码吧！
 if __name__=="__main__":
+
     # 1.跟踪微信群，并识别字段(传给文件传输对象，用于测试)
 
 # 开始  跟踪ENTRY - 19群
+
     strugglegroup = bot.groups().search('ENTRY - 19群')[0]
     print_group_msg(strugglegroup)
 
@@ -99,7 +107,10 @@ if __name__=="__main__":
 
     # 2.指定公众号，发送指定字段（直接测试即可）
 
+   # 保持登陆 / 运行::
 
-    # 保持登陆
+    # 进入 Python 命令行、让程序保持运行
     embed()
-    bot.join()
+
+    # 或者仅仅堵塞线程
+    # bot.join()
