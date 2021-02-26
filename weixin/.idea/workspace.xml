@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7d7b3dfd-e9fe-431e-8e06-9de63cf7ded7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx_f_sever.py" beforeDir="false" afterPath="$PROJECT_DIR$/wx_f_sever.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wxpy.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FF_T.py" beforeDir="false" afterPath="$PROJECT_DIR$/FF_T.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

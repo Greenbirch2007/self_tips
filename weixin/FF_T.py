@@ -9,19 +9,19 @@ def print_group_msg(msg):# 基本可以跟踪群消息，调整之后 捕获字�
     str_msg = str(msg)
     print(str_msg)
     # 下面这个判断不怎么有效！？
-    if  "最新" in str_msg: # 捕获的精确.第一次不算捕获吗？ 直接用
-        print("最新+追加成功")
+    if  "品川" in str_msg: # 捕获的精确.第一次不算捕获吗？ 直接用
+        print("直接测试品川信息")
 
         bot.file_helper.send(msg) # 跟踪测试
         bot.file_helper.send("捕获字段成功") #跟踪测试
         send_MP()
  
-    elif  "追加" in str_msg: # 捕获的精确.第一次不算捕获吗？ 直接用
-        print("最新+追加成功")
-
-        bot.file_helper.send(msg) # 跟踪测试
-        bot.file_helper.send("捕获字段成功") #跟踪测试
-        send_MP()
+    # elif  "追加" in str_msg: # 捕获的精确.第一次不算捕获吗？ 直接用
+    #     print("最新+追加成功")
+    # 
+    #     bot.file_helper.send(msg) # 跟踪测试
+    #     bot.file_helper.send("捕获字段成功") #跟踪测试
+    #     send_MP()
 
     else:
         print("追加失败")
@@ -38,6 +38,7 @@ def send_MP():
 # 最终解决了。鉴于时间就每天早上半点左右，清除之前的缓存文件，用xshell先扫码登陆
 # 之后把xshell退出，再用手机端登陆即可！无缝连接即可！
 # 最新和追加都可以测试一下
+# 初步测试效果还是有的，直接上品川测试，多册几次。随意一些
 if __name__=="__main__":
 
     try:
