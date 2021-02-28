@@ -7,6 +7,7 @@ bot = Bot(console_qr=True,cache_path=True)
 def print_group_msg(msg):# 基本可以跟踪群消息，调整之后 捕获字段成功
     str_msg = str(msg)
     print(str_msg)
+    _content =str_msg.split(":")[-1]
     # 下面这个判断不怎么有效！？
     if  "品川" in str_msg: # 捕获的精确.第一次不算捕获吗？ 直接用
         print("直接测试品川信息")
@@ -26,11 +27,10 @@ def print_group_msg(msg):# 基本可以跟踪群消息，调整之后 捕获字�
         print("追加失败")
     if "最新" in str_msg:  # 捕获的精确.第一次不算捕获吗？ 直接用
         print("直接测试品川信息")
-
         bot.file_helper.send(msg)  # 跟踪测试
         bot.file_helper.send("捕获历史字段-- 最新--  成功")  # 跟踪测试
         # 往数据库中插入数据
-        f_content=[tuple(msg)]
+        f_content=[tuple(_content)]
         insertDB(f_content)
 
     elif  "追加" in str_msg: # 捕获的精确.第一次不算捕获吗？ 直接用
@@ -39,7 +39,7 @@ def print_group_msg(msg):# 基本可以跟踪群消息，调整之后 捕获字�
         bot.file_helper.send(msg) # 跟踪测试
         bot.file_helper.send("捕获历史字段-- 追加--  成功") #跟踪测试
         # 往数据库中插入数据
-        f_content=[tuple(msg)]
+        f_content=[tuple(_content)]
         insertDB(f_content)
 
 def insertDB(content):
@@ -56,7 +56,8 @@ def insertDB(content):
         connection.close()
         print('向MySQL中添加数据成功！')
     except TypeError:
-        pass
+        print("插入数据库失败~")
+
 
 
 def send_MP():
