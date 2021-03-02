@@ -7,9 +7,8 @@ bot = Bot(console_qr=True,cache_path=True)
 def print_group_msg(msg):# 基本可以跟踪群消息，调整之后 捕获字段成功
     str_msg = str(msg)
     print(str_msg)
-    _content ="".join(str_msg.split())
     # 下面这个判断不怎么有效！？
-    if  "品川" in str_msg: # 捕获的精确.第一次不算捕获吗？ 直接用
+    if  "品川駅" in str_msg: # 捕获的精确.第一次不算捕获吗？ 直接用
         print("直接测试品川信息")
 
         bot.file_helper.send(msg) # 跟踪测试
@@ -22,8 +21,7 @@ def print_group_msg(msg):# 基本可以跟踪群消息，调整之后 捕获字�
         print("直接测试品川信息")
         bot.file_helper.send(msg)  # 跟踪测试
         bot.file_helper.send("捕获历史字段-- 最新--  成功")  # 跟踪测试
-        f1= [] #注意单一元素时，元组必须要用逗号
-        f_content=f1.append((_content,))
+        f_content=[(str_msg,)]
         insertDB(f_content)
 
     elif  "追加" in str_msg: # 捕获的精确.第一次不算捕获吗？ 直接用
@@ -32,8 +30,7 @@ def print_group_msg(msg):# 基本可以跟踪群消息，调整之后 捕获字�
         bot.file_helper.send(msg) # 跟踪测试
         bot.file_helper.send("捕获历史字段-- 追加--  成功") #跟踪测试
         # 往数据库中插入数据
-        f1= [] #注意单一元素时，元组必须要用逗号
-        f_content=f1.append((_content,))
+        f_content=[(str_msg,)]
         insertDB(f_content)
 
 def insertDB(content):

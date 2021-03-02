@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7d7b3dfd-e9fe-431e-8e06-9de63cf7ded7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FF_T.py" beforeDir="false" afterPath="$PROJECT_DIR$/FF_T.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
   <component name="RunManager" selected="Python.wx_f_client">
     <configuration name="wx_f" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -92,10 +91,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="0" key="#wx_f/0.0.1366.728@0.0.1366.728" timestamp="1614000469766" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1614251729190">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1614657149060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614251729190" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614657149060" />
     <state width="1345" height="311" key="GridCell.Tab.0.bottom" timestamp="1614266661019">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
