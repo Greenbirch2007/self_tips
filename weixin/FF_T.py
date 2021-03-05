@@ -8,7 +8,7 @@ def print_group_msg(msg):# 基本可以跟踪群消息，调整之后 捕获字�
     str_msg = str(msg)
     print(str_msg)
     # 下面这个判断不怎么有效！？
-    if  "品川駅" in str_msg: # 捕获的精确.第一次不算捕获吗？ 直接用
+    if  "品川駅 14-22" in str_msg: # 捕获的精确.第一次不算捕获吗？ 直接用
         print("直接测试品川信息")
 
         bot.file_helper.send(msg) # 跟踪测试
@@ -54,7 +54,7 @@ def send_MP():
 
      mps = bot.core.search_mps(name="美食天下")
      userName = mps[0]['UserName']
-     bot.core.send("3/23.25 品川 14-22 ", toUserName=userName)
+     bot.core.send("3/23 品川 14-22 ", toUserName=userName)
 
 
 # 最终解决了。鉴于时间就每天早上半点左右，清除之前的缓存文件，用xshell先扫码登陆
