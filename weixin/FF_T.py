@@ -52,9 +52,9 @@ def insertDB(content):
 
 def send_MP():
 
-     mps = bot.core.search_mps(name="美食天下")
+     mps = bot.core.search_mps(name="日企求职专家ENTRY")
      userName = mps[0]['UserName']
-     bot.core.send("3/23 品川 14-22 ", toUserName=userName)
+     bot.core.send("3/19 品川 14-22 ", toUserName=userName)
 
 
 # 最终解决了。鉴于时间就每天早上半点左右，清除之前的缓存文件，用xshell先扫码登陆
